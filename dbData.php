@@ -1,6 +1,6 @@
 <?php
-    $dbName = 2;
-    $login;
-    $pass;
-    $server;
+    $dbName = "germanDictionary";
+    $login = "root";
+    $pass = "";
+    $server = "localhost";
 ?>

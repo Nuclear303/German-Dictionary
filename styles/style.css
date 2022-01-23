@@ -34,3 +34,17 @@ a{
 .menu-options:hover{
     background: rgb(228, 228, 84);
 }
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+}
+.inputs{
+    width: 60%;
+    height: 30px;
+}
