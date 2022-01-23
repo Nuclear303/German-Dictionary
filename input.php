@@ -13,17 +13,17 @@
         
         $mysqli = new mysqli($server, $login, $pass, $dbName);
         if(mysqli_connect_errno()){
-            echo "Nie można połączyć z bazą danych. Kod błędu".mysqli_connect_error();
+            echo "Nie można połączyć z bazą danych. Kod błędu".mysqli_connect_error()."\n";
         }
         else{
-            echo "Połączono";
+            echo "Połączono z bazą danych...\n";
         }
 
         if($result = $mysqli -> query("INSERT INTO dictionary SET `word`='$word', `translation`='$translation'")){
-            echo "Dodano dane!";
+            echo "Dodano dane!\n";
         }
         else{
-            echo "Błąd! Nie dodano rekordu";
+            echo "Błąd! Nie dodano rekordu\n";
         }
     ?>
 </body>
