@@ -2,16 +2,15 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/php.css">
-
 </head>
 <body>
-    <?php
+<?php
         include("dbData.php");
         $word = $_POST['word'];
-        $translation = $_POST['trans'];
         
         $mysqli = new mysqli($server, $login, $pass, $dbName);
         if(mysqli_connect_errno()){
@@ -21,8 +20,10 @@
             echo "Połączono z bazą danych...\n";
         }
 
-        if($result = $mysqli -> query("INSERT INTO dictionary SET `word`='$word', `translation`='$translation'")){
-            echo "Dodano dane!\n
+        if($result = $mysqli -> query("SELECT * FROM `dictionary` WHERE `word` LIKE'%$word%' LIMIT 1")){
+            $row = mysqli_fetch_array($result);
+            echo("<b>$row[1] - $row[2]</b>");
+            echo"
             <a href='index.html'><input type='button' value='Wróć na stronę główną'></a>
             ";
         }

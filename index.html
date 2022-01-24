@@ -14,6 +14,23 @@
         <div class="menu"><a href="index.html"><input type="button" value="Get output" class="menu-options"></a><a href="input.html"><input type="button" value="Input new data" class="menu-options"></a></div>
     </header>
     <main>
+        <form action="word.php" method="post">
+            
+            <fieldset>
+                <h1>Translate</h1>
+                German word: <input type="text" name="word" id="" class="inputs"><br>
+                <input type="submit" value="Check">
+            </fieldset>
+           
+        </form>
+        <form action="trans.php" method="post">
+            <fieldset>
+                <h1>Check word using its translation</h1>
+                Translation: <input type="text" name="trans" id="" class="inputs"><br>
+                <input type="submit" value="Check">
+            </fieldset>
+           
+        </form>
     </main>
     <footer>
         <div>

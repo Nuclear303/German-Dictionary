@@ -48,3 +48,13 @@ fieldset{
     width: 60%;
     height: 30px;
 }
+input[type=submit]{
+    border: none;
+    border-radius: 0%;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(211, 233, 251);
+}
+input[type=submit]:hover{
+    background-color: rgb(222, 227, 231);
+}

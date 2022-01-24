@@ -1,0 +1,10 @@
+input[type=button]{
+    border-radius: 0%;
+    border: none;
+    background-color: aliceblue;
+    height:40px;
+    width: 200px;
+}
+body{
+    background-color: antiquewhite;
+}
